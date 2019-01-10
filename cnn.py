@@ -22,16 +22,13 @@ feature_extract = True
 
 def train_model(model, dataloaders, criterion, optimizer, num_epochs=25, is_inception=False):
     since = time.time()
-
-    val_acc_history = []
-    
+    val_acc_history = [] 
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
 
     for epoch in range(num_epochs):
         print('Epoch {}/{}'.format(epoch, num_epochs - 1))
-        
-
+      
         # Each epoch has a training and validation phase
         for phase in ['train', 'val']:
             if phase == 'train':
