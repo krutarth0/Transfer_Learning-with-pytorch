@@ -30,7 +30,7 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs=25, is_ince
 
     for epoch in range(num_epochs):
         print('Epoch {}/{}'.format(epoch, num_epochs - 1))
-        print('-' * 10)
+        
 
         # Each epoch has a training and validation phase
         for phase in ['train', 'val']:
